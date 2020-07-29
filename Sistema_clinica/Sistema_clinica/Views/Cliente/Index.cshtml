@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Sistema_clinica.Models.Cliente>
+
+@{
+    ViewBag.Title = "Clientes";
+    Layout = "~/Views/Shared/_LayoutLogado.cshtml";
+}
+
+<h2 class="text-center">Clientes</h2>
+
+
+<a href="~/Cliente/Cadastrar" class="btn btnFiltro">Cadastrar</a>
+<div class="btn btnFiltro" onclick="exibirFiltro('filtroCliente')">Buscar</div>
+
+<div id="filtroCliente" class="filtro_hide">
+    @using (Html.BeginForm("FiltrarNome", "Cliente"))
+    {
+        @Html.Editor("nome", new { htmlAttributes = new { placeholder = "Busca por nome" } })
+        <input type="submit" value="Buscar" class="btn btn-default btn-busca" />
+    }
+
+    @using (Html.BeginForm("FiltrarCpf", "Cliente"))
+    {
+        @Html.Editor("cpf", new { htmlAttributes = new { placeholder = "Busca por CPF", @class = "cpf_numeros" } })
+        <input type="submit" value="Buscar" class="btn btn-default btn-busca" />
+    }
+
+    @using (Html.BeginForm("Index", "Cliente"))
+    {
+        <input type="submit" value="Limpar filtros" class="btn btn-default" />
+    }
+    <br />
+</div>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }) |
+                @Html.ActionLink("Excluir", "Excluir", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section scripts{
+    @Scripts.Render("~/bundles/filtros")
+} 

@@ -1,0 +1,211 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*CONFIGURAÇÕES CUSTOMIZADAS*/
+@font-face {
+    font-family: "Embassy BT";
+    src: url('~/fonts/Embassy BT.ttf');
+}
+
+/* Centered text */
+#tituloInicial {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.6);
+    padding: 5px 25px 15px 25px;
+    border-radius:20px;
+    width: 40%;
+}
+
+    #tituloInicial h2, .titulo-sobre {
+        font-family: "Embassy BT";
+        font-size: 5vw;
+        color: rgb(224, 6, 32)
+    }
+
+
+.boxLogin {
+    border: solid 1px dashed;
+    border-radius:10px;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.telaLogin, .telaSistema {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url("../Imagens/Logo_transparente.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    position: relative;
+}
+
+
+/*TELA DE CONTATO*/
+.boxContato {
+    border: solid 1px dashed;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.telaContato {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url("../Imagens/carousel/img_clinica_recepcao.png");
+    background-size: cover;
+}
+
+.telaContato iframe{
+    width: 60%;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.infosContato {
+    width: 50%;
+    margin: auto;
+}
+
+.titulo-contato {
+    font-family: "Embassy BT";
+    font-size: 300%;
+    color: rgb(224, 6, 32)
+}
+
+
+
+/*TELA SOBRE*/
+.img-sobre {
+    width: 100%;
+}
+
+.img-sobre-detalhe{
+    width:25%;
+    margin: 20px;
+}
+
+.texto-sobre{
+    padding-left:100px;
+    padding-right:100px;
+    text-align: justify;
+}
+
+/*TELA INICIAL DO SISTEMA*/
+.txtBemVindo {
+    margin: 40px;
+}
+
+.boxMenu {
+    width: 280px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: rgb(255, 54, 134) 5px 5px 25px;
+}
+
+.boxBemVindo{
+    width:auto;
+}
+
+.btnMenu {
+    width: 140px;
+    margin: 10px 5px;
+    border: groove 3px rgb(255, 54, 134);
+    border-radius: 25px;
+    height: 70px;
+    padding: 15px;
+    font-size: 150%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    transition-duration: 0.4s;
+    color: black;
+}
+
+.btnMenu:hover {
+    background-color: rgb(255, 134, 182);
+    color: white;
+}
+
+.btnMenu:active {
+    box-shadow: 0 5px 5px #666 ;
+    transform: translateY(4px);
+}
+
+
+/*FILTROS DE BUSCA DAS CONSULTAS*/
+.btnFiltro {
+    width: 130px;
+    margin: 10px 5px;
+    border: groove 3px rgb(255, 54, 134);
+    border-radius: 15px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.filtro_hide {
+    visibility: hidden;
+    height: 0px;
+}
+
+.filtro_show {
+    visibility: visible;
+    height: auto;
+}
+
+.btn-busca{
+    height:26px;
+    margin-bottom:5px;
+    font-size: 12px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+
+
+
+.logo {
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
